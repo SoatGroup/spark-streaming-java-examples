@@ -2,7 +2,7 @@
 The java guide.
 
 ## Installation
-You'll need Spark, maven java.
+You'll need Spark, maven and java.
 Follow this tutorial to install spark :
 https://www.tutorialspoint.com/apache_spark/apache_spark_installation.htm
 
@@ -12,24 +12,28 @@ https://www.tutorialspoint.com/apache_spark/apache_spark_installation.htm
 ## WordCount
 ### spark.Streaming.WordCount
 *A stateless operation*
+
 Count the words that occurs instantanously.
 
 
 ## BasicErrorCount
 ### spark.Streaming.BasicErrorCount
 *A stateless operation*
+
 Count the Errors that occurs instantanously.
 
 
 ## BasicErrorCount
 ### spark.Streaming.CumulativeErrorCount
 *A statefull operation*
+
 Count the whole Errors that occured since the beginning.
 
 
 ## BasicErrorCount
 ### spark.Streaming.WindowAndKeyErrorCount
 *A statefull operation*
+
 Count the whole Errors that occured within a sliding window of time.
 
 
@@ -53,7 +57,7 @@ Using spark-submit
 ```shell
 $ spark-submit --class spark.streaming.Wordcount target/spark-streaming-examples-1.0.jar localhost 9999
 ```
-To launch the other examples, just change the class name : *--class spark.streaming.<ClassName>*
+To launch the other examples, just change the class name : *--class spark.streaming.ClassName*
 
 
 ### Test
