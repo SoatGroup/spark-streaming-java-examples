@@ -55,7 +55,7 @@ $ mvn clean package
 ### Run the streaming App
 Using spark-submit
 ```shell
-$ spark-submit --class spark.streaming.Wordcount target/spark-streaming-examples-1.0.jar localhost 9999
+$ spark-submit --class spark.streaming.WordCount target/spark-streaming-examples-1.0.jar localhost 9999
 ```
 To launch the other examples, just change the class name : *--class spark.streaming.ClassName*
 
