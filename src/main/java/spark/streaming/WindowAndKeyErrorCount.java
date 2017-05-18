@@ -61,7 +61,7 @@ public class WindowAndKeyErrorCount implements Serializable {
 
 
     //      Window count USING THE WINDOW SIZE AND THE SLIDIND INTERVAL
-        JavaPairDStream<String, Integer> windowedWordCounts = pairs.reduceByKeyAndWindow(reduceFunc, Durations.seconds(5), Durations.seconds(1));
+        JavaPairDStream<String, Integer> windowedWordCounts = pairs.reduceByKeyAndWindow(reduceFunc, Durations.seconds(5), Durations.seconds(5));
 
 //      Print the first ten elements of each RDD generated in this DStream to the console
         windowedWordCounts.print();
