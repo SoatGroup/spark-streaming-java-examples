@@ -29,7 +29,7 @@ public class WindowAndKeyErrorCount implements Serializable {
                 .set("spark.serializer", KryoSerializer.class.getName());
 
 //      Batch interval 5ms
-        JavaStreamingContext jssc = new JavaStreamingContext(conf, new Duration(5000));
+        JavaStreamingContext jssc = new JavaStreamingContext(conf, new Duration(1000));
 
 
 
@@ -61,7 +61,7 @@ public class WindowAndKeyErrorCount implements Serializable {
 
 
     //      Window count USING THE WINDOW SIZE AND THE SLIDIND INTERVAL
-        JavaPairDStream<String, Integer> windowedWordCounts = pairs.reduceByKeyAndWindow(reduceFunc, Durations.seconds(5), Durations.seconds(5));
+        JavaPairDStream<String, Integer> windowedWordCounts = pairs.reduceByKeyAndWindow(reduceFunc, Durations.seconds(5), Durations.seconds(10));
 
 //      Print the first ten elements of each RDD generated in this DStream to the console
         windowedWordCounts.print();
